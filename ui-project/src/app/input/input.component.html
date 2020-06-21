@@ -1,0 +1,52 @@
+<p-toast></p-toast>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+
+                    <div class="row ml-1">
+                        <span>Please insert value for DOI</span>
+                    </div>
+                    <div class="row mt-4 ml-1">
+                        <span>Please select value :</span>
+                    </div>
+                    <div class="row mt-4 ml-1">
+                        <span>Please select value :</span>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <input [(ngModel)]="doi" type="text" size="50" pInputText>
+                    <br>
+
+                    <div class="row mt-4">
+                        <p-radioButton value="1" class="ml-2" [(ngModel)]="value"></p-radioButton> <label
+                            class="ml-2 mr-4">Option
+                            1</label>
+                        <p-radioButton id="padding-radio" class="pl-4" value="2" [(ngModel)]="value"></p-radioButton> <label class="ml-2">Option
+                            2</label>
+                    </div>
+
+                    <div class="row mt-4">
+                        <p-radioButton value="1" class="ml-2" [(ngModel)]="valueJSON"></p-radioButton> <label
+                            class="ml-2 mr-4">Option JSON
+                            1</label>
+                        <p-radioButton value="2" [(ngModel)]="valueJSON"></p-radioButton> <label class="ml-2">Option JSON
+                            2</label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row mx-auto mt-3" style="width: 100px;">
+                <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="container">
+        </div>
+    </div>
+
+    <!-- <input [(ngModel)]="doi" type="text" size="50" pInputText>
+<p-radioButton value="1" [(ngModel)]="value"></p-radioButton> <label class="ml-2 mr-4">Option 1</label>
+        <p-radioButton value="2" [(ngModel)]="value"></p-radioButton> <label class="ml-2">Option 2</label> -->

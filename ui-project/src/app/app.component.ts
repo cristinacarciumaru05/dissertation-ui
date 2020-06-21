@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from './app-service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ui-project';
+  constructor(private service: AppService) {}
+  test(){
+    this.service.test().subscribe(str =>{
+      console.log(str);
+    });
+  }
 }
