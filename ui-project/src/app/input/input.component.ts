@@ -13,9 +13,9 @@ export class InputComponent{
 
     }
 
-    private doi ='';
-    private value ='0';
-    private valueJSON ='0'
+    private doi : string = '';
+    private value : string = '0';
+    private valueJSON : string = '0'
     onSubmit(){
         console.log("=============================");
         if(this.validateInput(this.doi,this.value,this.valueJSON)) {
@@ -25,12 +25,12 @@ export class InputComponent{
             this.addToast('Success','success');
         }
     }
-    validateInput(doi: String, value: String, valueJSON: String): boolean {
+    validateInput(doi: string, value: string, valueJSON: string): boolean {
         console.log(this.doi);
         console.log(this.value);
         console.log(this.valueJSON);
         let valid = true;
-        if(doi == '' ) {
+        if(doi == '' || this.validateDOI(doi) == false) {
             console.log('Wrong input for DOI');
             valid = false;
             this.addToast('Wrong input for DOI','error');
@@ -50,5 +50,13 @@ export class InputComponent{
     }
     addToast(msg:string, severity: string) {
             this.messageService.add({severity:severity, summary:'Service Message', detail:msg});
+    }
+    validateDOI(doi: string) {
+        let array = [];
+        array = doi.split('/');
+        if(array.length != 2 || array[0].length == 0 || array[1].length == 0) {
+            return false;
+        }
+        return true;
     }
 }

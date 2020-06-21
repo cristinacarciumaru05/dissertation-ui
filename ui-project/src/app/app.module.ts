@@ -12,12 +12,22 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {TabMenuModule} from 'primeng/tabmenu';
+import { RouterModule, Routes } from '@angular/router';
+import { GreetingsComponent } from './greetings/greetings.component';
+import {PanelModule} from 'primeng/panel';
 
+const appRoutes: Routes = [
+  {path: '', component: GreetingsComponent},
+  {path: 'greetings', component: GreetingsComponent},
+  {path: 'info', component: InputComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent
+    InputComponent,
+    GreetingsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +38,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RadioButtonModule,
     AngularFontAwesomeModule,
     ToastModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TabMenuModule,
+    RouterModule.forRoot(appRoutes),
+    PanelModule
 
   ],
   providers: [HttpClient, MessageService],

@@ -1,3 +1,5 @@
-<h3> </h3>
-<app-input-component></app-input-component>
-<!-- <button (click)=test()>TEST</button> -->
+<div class="header-img"></div>
+<p-tabMenu [model]="items" [activeItem]="getActive()"></p-tabMenu>
+<div style="padding: 0.5em;">
+    <router-outlet></router-outlet>
+</div>
