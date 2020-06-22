@@ -21,3 +21,26 @@
 :host ::ng-deep .custom-toast .ui-toast-message.ui-toast-message-info .ui-toast-close-icon {
     color: #ffffff;
 }
+
+.spacing {
+    padding-left: 20px;
+}
+
+.align-results {
+    margin: 0px auto;
+    width: 100%;
+}
+
+label {
+    // font-family: "Times New Roman", Times, serif;
+    font-family: "Lucida Console", Courier, monospace;
+    
+}
+td {
+    font-family: "Times New Roman", Times, serif;
+    // font-family: "Lucida Console", Courier, monospace;
+    
+}
+div {
+    font-family:"Comic Sans MS", cursive, sans-serif;
+}

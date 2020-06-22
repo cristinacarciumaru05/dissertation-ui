@@ -20,14 +20,8 @@ export class AppComponent implements OnInit {
       { label: 'Publications', icon: 'pi pi-fw pi-pencil', routerLink: 'info' }
     ];
   }
-  test() {
-    this.service.test().subscribe(str => {
-      console.log(str);
-    });
-  }
   getActive(){
-    console.log(this.router.url);
-    if(this.router.url == '/') {
+    if(this.router.url == '/' || this.router.url == '/greetings') {
       return this.items[0];
     }
     return this.items[1];

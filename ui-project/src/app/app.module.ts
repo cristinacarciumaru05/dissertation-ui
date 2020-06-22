@@ -16,6 +16,9 @@ import {TabMenuModule} from 'primeng/tabmenu';
 import { RouterModule, Routes } from '@angular/router';
 import { GreetingsComponent } from './greetings/greetings.component';
 import {PanelModule} from 'primeng/panel';
+import {FieldsetModule} from 'primeng/fieldset';
+import {ProgressBarModule} from 'primeng/progressbar';
+import {BlockUIModule} from 'primeng/blockui';
 
 const appRoutes: Routes = [
   {path: '', component: GreetingsComponent},
@@ -41,7 +44,10 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     TabMenuModule,
     RouterModule.forRoot(appRoutes),
-    PanelModule
+    PanelModule,
+    FieldsetModule,
+    ProgressBarModule,
+    BlockUIModule
 
   ],
   providers: [HttpClient, MessageService],
